@@ -9,7 +9,7 @@ services:
       TITLEDB_REGION: US
       TITLEDB_LANGUAGE: en
     ports:
-      - "9000:9001"
+      - "9001:9000"
     volumes:
       - nut_titles:/nut/titles:r
       - nut_conf:/nut/conf:rw
