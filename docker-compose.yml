@@ -3,11 +3,11 @@ services:
   nut:
     image: shawly/nut
     environment:
-      - TZ: America/Chicago
-      - USER_ID: 9000
-      - GROUP_ID: 9000
-      - TITLEDB_REGION: US
-      - TITLEDB_LANGUAGE: en
+      TZ: America/Chicago
+      USER_ID: 9000
+      GROUP_ID: 9000
+      TITLEDB_REGION: US
+      TITLEDB_LANGUAGE: en
     ports:
       - "9000:9000"
     volumes:
