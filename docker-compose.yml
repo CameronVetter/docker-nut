@@ -8,7 +8,6 @@ services:
       - GROUP_ID: 9000
       - TITLEDB_REGION: US
       - TITLEDB_LANGUAGE: en
-      - NUT_API_SCHEDULES: "[{"scan":"0/30 * * * *}]"
     ports:
       - "9000:9000"
     volumes:
