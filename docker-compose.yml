@@ -11,11 +11,20 @@ services:
     ports:
       - "9000:9000"
     volumes:
-      - roms/Nintendo - Switch/nut/processed:/nut/titles:r
-      - roms/Nintendo - Switch/nut/conf:/nut/conf:rw
-      - roms/Nintendo - Switch/nut/_NSPOUT:/nut/_NSPOUT:rw
-      - roms/Nintendo - Switch/nut/titledb:/nut/titledb:rw
+      - nut_titles:/nut/titles:r
+      - nut_conf:/nut/conf:rw
+      - nut_NSPOUT:/nut/_NSPOUT:rw
+      - nut_titledb:/nut/titledb:rw
 
 volumes:
-  roms:
+  nut_conf:
+    external: true
+
+  nut_NSPOUT:
+    external: true
+
+  nut_titledb:
+    external: true
+
+  nut_titles:
     external: true
