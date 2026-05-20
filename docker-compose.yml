@@ -1,0 +1,22 @@
+version: "3"
+services:
+  nut:
+    image: shawly/nut
+    environment:
+      - TZ: America/Chicago
+      - USER_ID: 9000
+      - GROUP_ID: 9000
+      - TITLEDB_REGION: US
+      - TITLEDB_LANGUAGE: en
+      - NUT_API_SCHEDULES: "[{"scan":"0/30 * * * *}]"
+    ports:
+      - "9000:9000"
+    volumes:
+      - "$roms/Nintendo - Switch/nut/processed:/nut/titles:rw"
+      - "$roms/Nintendo - Switch/nut/conf:/nut/conf:rw"
+      - "$roms/Nintendo - Switch/nut/_NSPOUT:/nut/_NSPOUT:rw"
+      - "$roms/Nintendo - Switch/nut/titledb:/nut/titledb:rw"
+
+volumes:
+  roms:
+    external: true
