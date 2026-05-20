@@ -12,7 +12,7 @@ services:
     ports:
       - "9000:9000"
     volumes:
-      - "$roms/Nintendo - Switch/nut/processed:/nut/titles:rw"
+      - "$roms/Nintendo - Switch/nut/processed:/nut/titles:r"
       - "$roms/Nintendo - Switch/nut/conf:/nut/conf:rw"
       - "$roms/Nintendo - Switch/nut/_NSPOUT:/nut/_NSPOUT:rw"
       - "$roms/Nintendo - Switch/nut/titledb:/nut/titledb:rw"
