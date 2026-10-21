@@ -5,4 +5,4 @@ cd /nut
 UMASK=${UMASK:-022}
 umask "$UMASK"
 
-s6-setuidgid nut python /nut/nut.py --scan --server
+python /nut/nut.py --scan --server

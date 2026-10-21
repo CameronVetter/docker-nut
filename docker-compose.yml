@@ -1,0 +1,30 @@
+version: "3"
+services:
+  nut:
+    image: shawly/nut
+    environment:
+      TZ: America/Chicago
+      USER_ID: 9000
+      GROUP_ID: 9000
+      TITLEDB_REGION: US
+      TITLEDB_LANGUAGE: en
+    ports:
+      - "9001:9000"
+    volumes:
+      - nut_titles:/nut/titles:r
+      - nut_conf:/nut/conf:rw
+      - nut_NSPOUT:/nut/_NSPOUT:rw
+      - nut_titledb:/nut/titledb:rw
+
+volumes:
+  nut_conf:
+    external: true
+
+  nut_NSPOUT:
+    external: true
+
+  nut_titledb:
+    external: true
+
+  nut_titles:
+    external: true
